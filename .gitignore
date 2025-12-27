@@ -1,0 +1,19 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+
+# Quarto
+
+**/Documentation/libs/
+**/Documentation/quarto/
+**/Documentation/_site/
+**/Documentation/.quarto/
+
+
+# Optional global
+.quarto/
+_site/
