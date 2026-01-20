@@ -13,7 +13,7 @@ class IconManager:
         # Wir gehen 3 Ebenen hoch: ui -> app -> root -> assets
         # (Pass das an, falls deine Struktur anders ist)
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-        icon_path = os.path.join(base_dir, "assets", "toolbar_icons", filename)
+        icon_path = os.path.join(base_dir,"app", "assets", "toolbar_icons", filename)
 
         # 2. Fallback-Icon erstellen
         if os.path.exists(icon_path):

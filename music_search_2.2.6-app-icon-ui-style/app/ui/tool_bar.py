@@ -33,7 +33,7 @@ class ToolBar(QToolBar):
         # 2. Music
         # Fallback: music_note.svg
         self.music_action = QAction(
-            IconManager.get_icon("library-music-symbolic", "mt_music_note.svg"),
+            IconManager.get_icon("library-music-symbolic", "mt_music_notes.svg"),
             "Music", 
             self
         )
