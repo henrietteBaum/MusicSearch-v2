@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "musicsearch-app"
+version = "2.2.6"
+authors = [
+  { name="Henriette Baum", email="info@computer-und-sehen.de" },
+]
+description = "Barrierefreie Suche für Musik (iTunes, MusicBrainz) und Literatur (OpenLibrary)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "PySide6",
+    "requests",
+]
+keywords = ["accessibility", "pyside6", "itunes", "openlibrary", "musicbrainz"]
+
+[project.gui-scripts]
+musicsearch = "app.main:main"
