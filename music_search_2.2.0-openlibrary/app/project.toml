@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "musicsearch-app"
-version = "2.2.5"
+version = "2.2.0"
 authors = [
   { name="Henriette Baum", email="info@computer-und-sehen.de" },
 ]

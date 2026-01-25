@@ -1,24 +1,9 @@
-# README v2.1.4
+# README v2.2.5
 
- Barrierefreiheit (Accessibility) wird in der Softwareentwicklung oft unterschätzt. Die Zeitdauer zu erhöhen, ist genau die richtige Entscheidung, damit Nutzer stressfrei lesen können, was das Programm gerade getan hat.
-
-Ein kleiner Tipp für später: Du kannst Nachrichten in der Statuszeile sogar mit HTML ein wenig hervorheben (z. B. fett schreiben), damit sie noch besser lesbar sind:
-`self.statusBar().showMessage("<b>Datei wurde erfolgreich gespeichert!</b>", 8000)`
-
-Da du jetzt los musst, hier eine kurze Zusammenfassung, was wir geschafft haben:
-
-1. **Modularer Zugriff:** Dein `MainWindow` findet jetzt den `result_browser` in jedem beliebigen Tab.
-2. **Intelligenter Pfad:** Die App schlägt "Dokumente" vor und merkt sich, wo du zuletzt warst.
-3. **Sichere Dateinamen:** Mit Zeitstempel und Tab-Titel wird nichts mehr versehentlich überschrieben.
-4. **Feedback:** Die Statuszeile gibt eine klare Rückmeldung mit genügend Zeit zum Lesen.
-
-
+Add a media type ComboBox to select Album, Track, or Artist search.
+The MusicBrainz search now also shows the Album for the search term.
+Update the Search Function for OpenLibrary to show book-title and author from the users search term.
 ________________
-
-## v2.2.4 - 2026-01-17
-
-- Korrektur: close-Fuktion und Thread-Fehler bein Schliessen des Fensters bei gleichzeitigem Verlassen des limit-Eingabefeldes behoben.
-- Verbesserung der Lesbarkeit der Suchergebnisse durch Anpassung von Schriftgrößen und Abständen im Ergebnis-Browser, farbliche Trenner zwischen den Ergebnissen hinzugefügt.
 
 
 ## v.2.2.5 - 2026-01-17
@@ -27,7 +12,7 @@ Diese Version fügt eine weitere ComboBox hinzu, über die der Nutzer auswählen
 
 Die Suche bei MusicBrainz zeigt nun auch das Album zum Suchbegriff an.
 
-Das ist ein wichtiges Prinzip im Software-Design: Das Model bestimmt die einheitliche Sprache deiner App, nicht die API.
+Das ist ein wichtiges Prinzip im Software-Design: Das Model bestimmt die einheitliche Sprache der App, nicht die API.
 
     Für den User ist es ein "Album".
 

@@ -1,44 +1,15 @@
-# README v2.1.4
+# README v2.2.7
 
- Barrierefreiheit (Accessibility) wird in der Softwareentwicklung oft unterschätzt. Die Zeitdauer zu erhöhen, ist genau die richtige Entscheidung, damit Nutzer stressfrei lesen können, was das Programm gerade getan hat.
-
-Ein kleiner Tipp für später: Du kannst Nachrichten in der Statuszeile sogar mit HTML ein wenig hervorheben (z. B. fett schreiben), damit sie noch besser lesbar sind:
-`self.statusBar().showMessage("<b>Datei wurde erfolgreich gespeichert!</b>", 8000)`
-
-Da du jetzt los musst, hier eine kurze Zusammenfassung, was wir geschafft haben:
-
-1. **Modularer Zugriff:** Dein `MainWindow` findet jetzt den `result_browser` in jedem beliebigen Tab.
-2. **Intelligenter Pfad:** Die App schlägt "Dokumente" vor und merkt sich, wo du zuletzt warst.
-3. **Sichere Dateinamen:** Mit Zeitstempel und Tab-Titel wird nichts mehr versehentlich überschrieben.
-4. **Feedback:** Die Statuszeile gibt eine klare Rückmeldung mit genügend Zeit zum Lesen.
-
-
-________________
-
-## v2.2.4 - 2026-01-17
-
-- Korrektur: close-Fuktion und Thread-Fehler bein Schliessen des Fensters bei gleichzeitigem Verlassen des limit-Eingabefeldes behoben.
-- Verbesserung der Lesbarkeit der Suchergebnisse durch Anpassung von Schriftgrößen und Abständen im Ergebnis-Browser, farbliche Trenner zwischen den Ergebnissen hinzugefügt.
-
-
-## v.2.2.5 - 2026-01-17
-
-Das ist ein wichtiges Prinzip im Software-Design: Das Model bestimmt die einheitliche Sprache deiner App, nicht die API.
-
-    Für den User ist es ein "Album".
-
-    iTunes nennt es technisch collectionName.
-
-    MusicBrainz nennt es technisch releases.
-
-    Spotify nennt es wieder anders.
-
-Die Aufgabe deiner Service-Dateien (musicbrainz.py, itunes.py) ist es, diese fremden Begriffe in deine Sprache (album) zu übersetzen. Wenn du für jede API ein eigenes Feld machst (itunes_album, mb_release, spotify_context), wird dein Model riesig und dein Code für die Anzeige (Formatter) ein Chaos aus if/else.
+Add Fallback Toolbar Icons from Material Design Icons.
 
 
 ## LinuxMint
-installieren: libxcb-cursor0
+For LinuxMint users experiencing issues with missing library, please install the following package to resolve the issue:
+
+```bash
+sudo apt install libxcb-cursor0
+```
 
 
-## v2.2.7 - 2026-02-14
+## v2.2.7 
 Um die Probleme mit den Icons der Toolbar zu beheben, haben wir die Fallback-Icons als Standard gesetzt. Dadurch wird sichergestellt, dass die Toolbar-Icons immer korrekt angezeigt werden, unabhängig von der Verfügbarkeit der System-Icons. Verwendet werden Icons der Material Design Icons Sammlung, die eine breite Palette von Symbolen bietet und gut mit verschiedenen Themes harmoniert. Die Icons wurden in das Projektverzeichnis unter `assets/toolbar_icons/` hinzugefügt und werden nun standardmäßig geladen.
