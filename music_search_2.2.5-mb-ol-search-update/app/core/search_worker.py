@@ -13,7 +13,7 @@ class SearchWorker(QThread):
         self.query = query
         self.limit = limit
         self.domain = domain
-        self.mode = mode # <--- NEU: Wir speichern den Modus
+        self.mode = mode # <--- NEU: den Modus speichern
 
     def run(self):
         """Hier wird die blockierende Suche ausgeführt."""

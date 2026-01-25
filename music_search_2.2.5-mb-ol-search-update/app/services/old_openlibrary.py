@@ -1,8 +1,7 @@
 # app/services/openlibrary.py
 
 import requests
-from core.models import Book, Track
-from core.models import SearchResult
+from core.models import Book, SearchResult
 
 OPEN_LIBRARY_URL = "https://openlibrary.org/search.json"
 

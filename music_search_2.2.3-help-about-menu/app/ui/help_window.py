@@ -45,7 +45,9 @@ class HelpWindow(QWidget):
                     Press <span class="label">ENTER</span> or klick Search-Button.
                 </div>
             </div>
-
+            <p></p>
+            <hr>
+            <p></p>
             <div class="result-entry">
                 <div class="artist-title">2. View Settings</div>
                 <div class="info-text">

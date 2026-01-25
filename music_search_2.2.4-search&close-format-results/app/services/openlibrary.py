@@ -15,11 +15,6 @@ BASE_PARAMS = {
 
 def search(term: str, limit: int = 5):
 
-    # params = {
-    #     "q": term,
-    #     "limit": limit,
-    #     "fields": "title,author_name,first_publish_year,publisher"
-    # }
     params = BASE_PARAMS.copy()
     query_string = f"title:({term}) OR author:({term})"
     params["q"] = query_string

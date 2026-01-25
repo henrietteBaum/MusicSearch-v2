@@ -7,8 +7,8 @@ from enum import Enum, auto
 class Track:
     title: str
     artist: str
-    album: str | None  # Hier speichern wir ALLES rein (iTunes collection, MB releases)
-    year: str | None   # <--- NEU: Das macht Sinn, um es einheitlich mit Book zu haben
+    album: str | None  # Hier speichern wir ALLES (iTunes collection, MB releases)
+    year: str | None   # <--- NEU: einheitlich mit Book 
 
 @dataclass
 class Book:
@@ -21,7 +21,7 @@ class Book:
 @dataclass
 class SearchResult:
     source: str 
-    tracks: List[Any] # Nutzung von List[Any] statt list[Any] ist in manchen Python Versionen robuster
+    tracks: List[Any] # List explizit verwenden für ältere Python Versionen
     total: int
 
     def __post_init__(self):

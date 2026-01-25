@@ -33,7 +33,7 @@ def get_toolbar_css(accent_color: str) -> str:
             font-weight: bold;
         }}
         QToolButton:hover {{
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.15);
         }}
     """
 
@@ -44,11 +44,11 @@ def get_search_button_css(accent_color: str) -> str:
             background-color: rgba(255, 255, 255, 0.08);
             border: 1px solid #555;
             border-radius: 4px;
-            padding: 8px 14px;
+            padding: 4px 8px;
             color: white;
             font-size: 12pt;
             font-weight: bold;
-        }}
+        }}        
         QPushButton:hover {{
             border: 2px solid {accent_color};
             background-color: rgba(255, 255, 255, 0.15);
@@ -62,6 +62,19 @@ def get_search_button_css(accent_color: str) -> str:
             background-color: transparent;
             border: 1px solid #333;
             color: #666;
+        }}
+    """
+
+# ----- StatusBar Separator -----
+def get_sidebar_separator_css(accent_color: str) -> str:
+    return f"""
+        #sidebarLine {{
+            border: none;
+            border-top: 1px solid {accent_color};
+            background-color: transparent;
+            max-height: 1px;
+            margin-left: 4px;
+            margin-right: 4px;
         }}
     """
 

@@ -20,7 +20,7 @@ class ToolBar(QToolBar):
         self.all_action.setChecked(True)
         self.all_action.setToolTip("Search everywhere")
 
-        self.music_icon = QIcon.fromTheme("library-music-symbolic")
+        self.music_icon = QIcon.fromTheme("emblem-music-symbolic")
         self.music_action = QAction(self.music_icon, "Music", self)
         self.music_action.setCheckable(True)
         self.music_action.setShortcut("Ctrl+Return")

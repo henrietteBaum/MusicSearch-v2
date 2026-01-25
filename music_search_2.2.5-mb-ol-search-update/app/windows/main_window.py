@@ -175,7 +175,7 @@ class MainWindow(QMainWindow):
             "About this App",
             """
             <h3>Media Search App</h3>
-            <p>Version 2.3</p>
+            <p>Version 2</p>
             <p>This ist a search-tool for Music und Literature.</p>
             <p>Find matching music titles and artists for any search term in the iTunes and MusicBrainz databases. 
             The literature search shows matching books or publications from OpenLibrary.</p>

@@ -11,7 +11,6 @@ from PySide6.QtWidgets import(
     QPushButton,
 )
 from PySide6.QtGui import QIcon
-
 from PySide6.QtCore import Qt, Signal
 
 class SideBar(QDockWidget):
@@ -76,6 +75,11 @@ class SideBar(QDockWidget):
         self.limit_label.setBuddy(self.limit_input)
         #self.limit_input.setAccessibleDescription("Enter search-limit")
 
+        #---- Separator with accent_color -----
+        # self.sidebar_line = QFrame()
+        # self.sidebar_line.setFrameShape(QFrame.HLine)
+        # self.sidebar_line.setObjectName("sidebarLine")
+
         # ----- History -----
         self.history_label = QLabel("Search History")
         self.history_list = QListWidget()
@@ -96,6 +100,7 @@ class SideBar(QDockWidget):
         layout.addWidget(self.limit_input, 5, 0)
         layout.addWidget(self.search_button, 6, 0)
         
+        #layout.addWidget(self.sidebar_line, 7, 0)
         layout.addWidget(QFrame(frameShape=QFrame.HLine), 7, 0)
 
         layout.addWidget(self.history_label, 8, 0)

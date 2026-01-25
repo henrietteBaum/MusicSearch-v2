@@ -13,7 +13,7 @@ from PySide6.QtWidgets import(
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Qt, Signal
 
-from ui.ui_styles import get_accent_color, get_search_button_css # <--- Import
+from ui.ui_styles import get_accent_color, get_search_button_css, get_sidebar_separator_css 
 
 class SideBar(QDockWidget):
 
@@ -59,13 +59,6 @@ class SideBar(QDockWidget):
         self.mode_input.setAccessibleName("Select search category")
         self.mode_label.setBuddy(self.mode_input)
 
-        # ----- Search-Button -----
-        self.search_button = QPushButton("Search")
-        self.search_button.setIcon(QIcon.fromTheme("system-search"))
-        self.search_button.clicked.connect(self.emit_search)
-        self.search_button.setAccessibleName("Start Search in all Databases.")
-        self.search_button.setDefault(True)
-        self.search_button.setAutoDefault(True)
 
         # ----- Limit input -----
         self.limit_label = QLabel("Result limit:")
@@ -78,6 +71,19 @@ class SideBar(QDockWidget):
         self.limit_label.setBuddy(self.limit_input)
         #self.limit_input.setAccessibleDescription("Enter search-limit")
 
+        # ----- Search-Button -----
+        self.search_button = QPushButton("Search")
+        self.search_button.setIcon(QIcon.fromTheme("system-search"))
+        self.search_button.clicked.connect(self.emit_search)
+        self.search_button.setAccessibleName("Start Search in all Databases.")
+        self.search_button.setDefault(True)
+        self.search_button.setAutoDefault(True)
+
+        #---- Separator -----
+        self.sidebar_line = QFrame()
+        self.sidebar_line.setFrameShape(QFrame.HLine)
+        self.sidebar_line.setObjectName("sidebarLine")
+        
         # ----- History -----
         self.history_label = QLabel("Search History")
         self.history_list = QListWidget()
@@ -97,8 +103,9 @@ class SideBar(QDockWidget):
         layout.addWidget(self.limit_label, 4, 0)
         layout.addWidget(self.limit_input, 5, 0)
         layout.addWidget(self.search_button, 6, 0)
-        
-        layout.addWidget(QFrame(frameShape=QFrame.HLine), 7, 0)
+
+        layout.addWidget(self.sidebar_line, 7, 0)
+        #layout.addWidget(QFrame(frameShape=QFrame.HLine), 7, 0)
 
         layout.addWidget(self.history_label, 8, 0)
         layout.addWidget(self.history_list, 9, 0)
@@ -157,4 +164,5 @@ class SideBar(QDockWidget):
         accent = get_accent_color(self)
         # Style auf den Button anwenden
         self.search_button.setStyleSheet(get_search_button_css(accent))
+        self.sidebar_line.setStyleSheet(get_sidebar_separator_css(accent))
             

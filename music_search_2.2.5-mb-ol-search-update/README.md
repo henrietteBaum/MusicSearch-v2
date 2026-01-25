@@ -23,6 +23,10 @@ ________________
 
 ## v.2.2.5 - 2026-01-17
 
+Diese Version fügt eine weitere ComboBox hinzu, über die der Nutzer auswählen kann, welchen Medientyp er suchen möchte (Album, Track, Künstler).
+
+Die Suche bei MusicBrainz zeigt nun auch das Album zum Suchbegriff an.
+
 Das ist ein wichtiges Prinzip im Software-Design: Das Model bestimmt die einheitliche Sprache deiner App, nicht die API.
 
     Für den User ist es ein "Album".
@@ -33,4 +37,8 @@ Das ist ein wichtiges Prinzip im Software-Design: Das Model bestimmt die einheit
 
     Spotify nennt es wieder anders.
 
-Die Aufgabe deiner Service-Dateien (musicbrainz.py, itunes.py) ist es, diese fremden Begriffe in deine Sprache (album) zu übersetzen. Wenn du für jede API ein eigenes Feld machst (itunes_album, mb_release, spotify_context), wird dein Model riesig und dein Code für die Anzeige (Formatter) ein Chaos aus if/else.
+Die Aufgabe der Service-Dateien (musicbrainz.py, itunes.py) ist es, diese fremden Begriffe in die Sprache des Nutzers bzw. der App (album) zu übersetzen. Würde man stattdessen für jede API ein eigenes Feld einrichten (itunes_album, mb_release, spotify_context), würde das Model riesig und dein Code für die Anzeige (Formatter) ein Chaos aus if/else.
+
+
+
+

@@ -1,4 +1,9 @@
 # app/core/formatters/styles.py
+"""
+Docstring for music_search_2.2.7
+Formatters: Common CSS styles for HTML searchresults.
+"""
+
 
 def get_common_css(accent_color):
     return f"""
