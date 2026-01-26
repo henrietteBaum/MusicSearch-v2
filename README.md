@@ -19,6 +19,8 @@ Im Gegensatz zu vielen Web-Interfaces legt diese App ihren Fokus konsequent auf 
 
 MusicSearch ist als Lern- und Demo-Projekt für den Bereich Barrierefreiheit entstanden. Es kann als Vorlage dienen für Apps, die für den Nutzer API-Schnittstellen implementieren
 
+![screenshot: MusicSearch v2.2.7](./assets/musicsearch-v2.2.7.png)
+
 
 ## Key Features (Accessibility First)
 
@@ -48,7 +50,7 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-**Linux (Ubuntu, Mint, Fedora):**
+**Linux (Ubuntu, Mint, Fedora, Mac):**
 
 ```bash
 python3 -m venv .venv
@@ -58,10 +60,10 @@ source .venv/bin/activate
 ### 3. Abhängigkeiten installieren
 
 ```bash
-pip install PySide6 requests
+pip3 install pyside6 requests
 ```
 
-## System-spezifische Hinweise (Linux)
+## System-spezifische Hinweise
 
 Sollte die App unter **Linux Mint** oder **Ubuntu** nicht starten (XCB-Fehler), fehlt eine wichtige Systembibliothek. Installieren Sie diese mit:
 
@@ -69,16 +71,17 @@ Sollte die App unter **Linux Mint** oder **Ubuntu** nicht starten (XCB-Fehler), 
 sudo apt update && sudo apt install libxcb-cursor0
 ```
 
-Unter **Fedora** integriert sich die App nahtlos in die KDE-Umgebung und übernimmt Ihre gewählten Systemfarben automatisch.
+Unter **Fedora-KDE**, **LinuxMint**, **MacOS**, **Windows11** integriert sich die App nahtlos in die Desktop-Umgebung und übernimmt die gewählten Systemfarben automatisch.
 
----
+Unter Fedora-Workstation 43 (GNOME) und Ubuntu 25.10 wird der DarkMode nicht übernommen. Dadurch sind die fest programmierten weißen Schriftfarben aus den App-Versionen 2.2.6 und 2.2.7 nicht lesbar. Verwenden Sie für diese Betriebssysteme Version 2.2.5, die noch keine Formatierung vorgibt.
+
 
 ## App starten
 
 Starten Sie die Anwendung aus dem Hauptverzeichnis mit folgendem Befehl:
 
 ```bash
-python -m main.py
+python3 main.py
 ```
 ## Versions-Highlights
 
