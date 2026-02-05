@@ -7,7 +7,7 @@
       <img src="assets/app-icon-orange-pink-circle.png" width="240">
     </td>
     <td>
-      <h3> MusicSearch mit Python und PySide5 </h3>
+      <h3> MusicSearch mit Python und PySide6 </h3>
       <p> MusicSearch ist eine barrierefreie Desktop-Anwendung zur gleichzeitigen Suche nach Musik (iTunes, MusicBrainz) und Literatur (OpenLibrary). 
       </p>
     </td>
