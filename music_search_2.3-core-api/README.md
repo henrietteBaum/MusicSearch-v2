@@ -70,22 +70,14 @@ Starten Sie die Anwendung aus dem Hauptverzeichnis mit folgendem Befehl:
 python -m main.py
 
 ```
-## Versions-Highlights
+## Versions-Hinweise:
+**v2.2.9:** Zoom-Funktion für die gesamte GUI, mit Shortcut und über das Menü
+**v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
+**v2.2.5:** Einheitliches Datenmodell („Album“ statt API-Kryptik).
+**v2.1.4:** Umstellung auf semantische HTML-Ergebnisanzeige für Screenreader.
+**v2.0.0:** Erste stabile CLI-Version mit MusicBrainz-Integration.
 
-* **v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
-* **v2.2.5:** Einheitliches Datenmodell („Album“ statt API-Kryptik).
-* **v2.1.4:** Umstellung auf semantische HTML-Ergebnisanzeige für Screenreader.
-* **v2.0.0:** Erste stabile CLI-Version mit MusicBrainz-Integration.
 
----
-
-## Das Team
-
-Dieses Projekt ist eine Gemeinschaftsarbeit von:
-
-* **Henriette** (Lead Developer)
-* **Conrad** (Chief Morale Officer 🐕 – zuständig für Pausenmanagement)
-* **Gemini & Lumo** (KI-Kollaborateure für Architektur & Code-Reviews)
 
 
 

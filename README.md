@@ -62,6 +62,11 @@ source .venv/bin/activate
 ```bash
 pip3 install pyside6 requests
 ```
+Ab Version 2.3.0 benötigen Sie zusätzlich `keyring` (für Nutzung und Verwaltung des CORE API-Keys):
+
+```bash
+pip3 install keyring
+```
 
 ## System-spezifische Hinweise
 
@@ -83,11 +88,12 @@ Starten Sie die Anwendung aus dem Hauptverzeichnis mit folgendem Befehl:
 ```bash
 python3 main.py
 ```
-## Versions-Highlights
-
+## Versions-Hinweise
+- **2.3.0:** Zusätzliche Suchfunktion über die CORE-API
+- **v2.2.9:** Zoom-Funktion für die GUI, per Shortcut und über das Menü
 - **v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
-- **v2.2.5:** Einheitliches Datenmodell („Album“ statt API-Kryptik).
-- **v2.2.0** Implementierung der OpenLibrary-API
+- **v2.2.5:** Einheitliches Datenmodell.
+- **v2.2.0** Implementierung der OpenLibrary-API.
 - **v2.1.4:** Umstellung auf semantische HTML-Ergebnisanzeige für Screenreader.
 - **v2.0.0:** Erste stabile CLI-Version mit iTunes und MusicBrainz-Integration.
 
