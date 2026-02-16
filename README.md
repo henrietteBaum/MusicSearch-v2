@@ -15,18 +15,34 @@
 </table>
 
 
-Im Gegensatz zu vielen Web-Interfaces legt diese App ihren Fokus konsequent auf Benutzerzentrierung und Barrierefreiheit. Sie wurde entwickelt, um Screenreader-Nutzern und Menschen mit Sehbeeinträchtigungen ein stressfreies Rechercherlebnis zu ermöglichen.
+Im Gegensatz zu vielen Web-Interfaces legt diese App ihren Fokus konsequent auf Benutzerzentrierung und Barrierefreiheit. Sie wurde entwickelt, um Screenreader-Nutzern und Menschen mit Sehbeeinträchtigungen eine stressfreies Recherche zu ermöglichen.
 
-MusicSearch ist als Lern- und Demo-Projekt für den Bereich Barrierefreiheit entstanden. Es kann als Vorlage dienen für Apps, die für den Nutzer API-Schnittstellen implementieren
+MusicSearch ist als Lern- und Demo-Projekt für den Bereich Barrierefreiheit entstanden. Es kann als Vorlage dienen für Apps, die für den Nutzer API-Schnittstellen implementieren, eine Zoom-Funktion für die GUI sowie Accessible Names (Beschriftung von GUI-Elementen für den Screenreader) bereitstellen.
 
-![screenshot: MusicSearch v2.2.7](./assets/musicsearch-v2.2.7.png)
+#### TuxedoOs - KDE Plasma:
 
+![screenshot: MusicSearch v2.3.0](./assets/screenshots/musicsearch-v2.3.png)
+
+![screenshot: MusicSearch v2.3.0 mit CORE Suche](./assets/screenshots/musicsearch-v2.3-core-search-fullscreen.png)
+
+#### Ubuntu 25.10 - GNOME:
+
+![screenshot: MusicSearch v.2.3.0 unter Ubuntu 25.10](./assets/screenshots/musicsearch-v2.3-ubuntu1.png)
+
+#### Fedora 43 Workstation - GNOME:
+
+![screenshot: MusicSearch v.2.3.0 unter Fedora 43 Workstation](./assets/screenshots/musicsearch-v2.3-fedor-3.png)
+
+
+#### Linux Mint 22.3 - Cinnamon
+
+![screenshot: MusicSearch v.2.3.0 unter Linux Mint 22.3](./assets/screenshots/musicsearch-v2.3-mint.png)
 
 ## Key Features (Accessibility First)
 
 * **Semantische HTML-Ausgabe:** Ergebnisse werden im `QTextBrowser` strukturiert aufbereitet, sodass Screenreader Überschriften und Datensätze klar unterscheiden können.
 * **Optimierte Tab-Führung:** Die Fokus-Reihenfolge folgt dem natürlichen Arbeitsfluss (Eingabe -> Filter -> Ergebnisse).
-* **Grenzenloser Zoom:** Die Ergebnisanzeige lässt sich per `Strg + Mausrad` oder Tastatur flexibel skalieren.
+* **Grenzenloser Zoom:** Die Ergebnisanzeige lässt sich per `Strg + Mausrad` oder Tastatur flexibel skalieren, die Benutzeroberfläche per Shortcut oder über das Menü (ab v2.2.9).
 * **Hoher Kontrast & Akzentfarben:** Die App verzichtet auf blasse Schriften und übernimmt automatisch die Akzentfarben Ihres Betriebssystems.
 * **Plattform-Konsistenz:** Eigene Material Design Icons garantieren ein identisches Interface unter Windows, KDE und GNOME.
 
