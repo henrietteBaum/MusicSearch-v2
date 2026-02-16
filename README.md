@@ -105,7 +105,7 @@ Starten Sie die Anwendung aus dem Hauptverzeichnis mit folgendem Befehl:
 python3 main.py
 ```
 ## Versions-Hinweise
-- **2.3.0:** Zusätzliche Suchfunktion über die CORE-API
+- **v2.3.0:** Zusätzliche Suchfunktion über die CORE-API
 - **v2.2.9:** Zoom-Funktion für die GUI, per Shortcut und über das Menü
 - **v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
 - **v2.2.5:** Einheitliches Datenmodell.
