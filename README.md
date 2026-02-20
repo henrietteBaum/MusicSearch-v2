@@ -38,6 +38,9 @@ MusicSearch ist als Lern- und Demo-Projekt für den Bereich Barrierefreiheit ent
 
 ![screenshot: MusicSearch v.2.3.0 unter Linux Mint 22.3](./assets/screenshots/musicsearch-v2.3-mint.png)
 
+#### Windows 11:
+
+![screenshot:MusicSearch v2.3.0 unter Windows 11](./assets/screenshots/musicsearch-v.2.3-win.png)
 ## Key Features (Accessibility First)
 
 * **Semantische HTML-Ausgabe:** Ergebnisse werden im `QTextBrowser` strukturiert aufbereitet, sodass Screenreader Überschriften und Datensätze klar unterscheiden können.
