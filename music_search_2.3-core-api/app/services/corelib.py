@@ -15,14 +15,12 @@ CORE_API_URL = "https://api.core.ac.uk/v3/search/works"
 def is_valid_key_format(key: str) -> bool:
     """
     Prüft, ob der Key technisch plausibel ist.
-    Ein API-Key darf keine Zeilenumbrüche haben und ist meistens nicht riesig.
+    Ein API-Key darf keine Zeilenumbrüche und keine Leerzeicheb haben.
     """
     if not key:
         return False
-    # Ein Key mit Zeilenumbrüchen ist definitiv falsch (z.B. versehentlich Code kopiert)
     if '\n' in key or '\r' in key:
         return False
-    # CORE Keys sind alphanumerisch. Wenn er Leerzeichen enthält, ist er verdächtig.
     if ' ' in key:
         return False
     return True
@@ -78,42 +76,6 @@ def ensure_api_key(parent_window) -> bool:
     return False
 
 
-
-
-# ----- API-key abfragen -----
-# def has_api_key() -> bool:
-#     """Prüft schnell, ob ein Key existiert, ohne zu fragen."""
-#     return keyring.get_password(APP_NAME, KEY_NAME) is not None
-
-# def ensure_api_key(parent_window) -> bool:
-#     """
-#     Fragt den User interaktiv nach dem Key, falls noch keiner da ist.
-#     Muss im MAIN-THREAD aufgerufen werden!
-#     """
-#     if has_api_key():
-#         return True
-        
-#     # Hier war der Fehler: QLineEdit.EchoMode.Password nutzen
-#     key, ok = QInputDialog.getText(
-#         parent_window, 
-#         "CORE API Key Required", 
-#         "Please enter your CORE API Key:\n(Free at https://core.ac.uk/services/api)",
-#         echo=QLineEdit.EchoMode.Password # <--- KORREKTUR HIER
-#     )
-    
-#     if ok and key:
-#         keyring.set_password(APP_NAME, KEY_NAME, key.strip())
-#         return True
-    
-#     return False
-
-# def get_stored_key():
-#     return keyring.get_password(APP_NAME, KEY_NAME)
-
-
-
-
-
 def search(term: str, limit: int = 5, mode: str = "all") -> SearchResult:
     """
     Sucht nach wissenschaftlichen Artikeln in CORE.
@@ -130,8 +92,6 @@ def search(term: str, limit: int = 5, mode: str = "all") -> SearchResult:
         "Authorization": f"Bearer {api_key}"
     }
     
-    # Suchanfrage bauen
-    # CORE unterstützt einfache Queries. Wir geben den Term weiter.
     params = {
         "q": term,
         "limit": limit
