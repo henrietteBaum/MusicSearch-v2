@@ -1,4 +1,4 @@
-# MusicSearch (v2.2.7)
+# MusicSearch (v2.3)
 
 **MusicSearch** ist eine barrierefreie Desktop-Anwendung zur gleichzeitigen Suche nach Musik (iTunes, MusicBrainz) und Literatur (OpenLibrary).
 
@@ -45,7 +45,7 @@ source .venv/bin/activate
 ### 3. Abhängigkeiten installieren
 
 ```bash
-pip install PySide6 requests
+pip install PySide6 requests keyring
 
 ```
 
@@ -58,9 +58,6 @@ sudo apt update && sudo apt install libxcb-cursor0
 
 ```
 
-Unter **Fedora** integriert sich die App nahtlos in die KDE-Umgebung und übernimmt Ihre gewählten Systemfarben automatisch.
-
----
 
 ## App starten
 
@@ -71,11 +68,12 @@ python -m main.py
 
 ```
 ## Versions-Hinweise:
-**v2.2.9:** Zoom-Funktion für die gesamte GUI, mit Shortcut und über das Menü
-**v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
-**v2.2.5:** Einheitliches Datenmodell („Album“ statt API-Kryptik).
-**v2.1.4:** Umstellung auf semantische HTML-Ergebnisanzeige für Screenreader.
-**v2.0.0:** Erste stabile CLI-Version mit MusicBrainz-Integration.
+- **v2.3.0:** Kontextsuche über die CORE-API
+- **v2.2.9:** Zoom-Funktion für die gesamte GUI, mit Shortcut und über das Menü
+- **v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
+- **v2.2.5:** Einheitliches Datenmodell („Album“ statt API-Kryptik).
+- **v2.1.4:** Umstellung auf semantische HTML-Ergebnisanzeige für Screenreader.
+- **v2.0.0:** Erste stabile CLI-Version mit MusicBrainz-Integration.
 
 
 
