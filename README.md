@@ -8,75 +8,63 @@
     </td>
     <td>
       <h3> MusicSearch mit Python und PySide6 </h3>
-      <p> MusicSearch ist eine barrierefreie Desktop-Anwendung zur gleichzeitigen Suche nach Musik (iTunes, MusicBrainz) und Literatur (OpenLibrary). 
+      <p> MusicSearch is an accessible desktop application designed to simultaneously search for music (iTunes, MusicBrainz) and literature (OpenLibrary). 
       </p>
     </td>
   </tr>
 </table>
 
+Unlike many web interfaces, this app consistently focuses on user-centered design and accessibility. It was developed to provide screen reader users and people with visual impairments with a stress-free research experience.
 
-Im Gegensatz zu vielen Web-Interfaces legt diese App ihren Fokus konsequent auf Benutzerzentrierung und Barrierefreiheit. Sie wurde entwickelt, um Screenreader-Nutzern und Menschen mit Sehbeeinträchtigungen eine stressfreies Recherche zu ermöglichen.
+MusicSearch was conceived as a learning and demo project for accessibility. It can serve as a template for apps that implement API interfaces for users, provide a zoom function for the GUI, and offer accessible names (labeling of GUI elements for screen readers).
 
-MusicSearch ist als Lern- und Demo-Projekt für den Bereich Barrierefreiheit entstanden. Es kann als Vorlage dienen für Apps, die für den Nutzer API-Schnittstellen implementieren, eine Zoom-Funktion für die GUI sowie Accessible Names (Beschriftung von GUI-Elementen für den Screenreader) bereitstellen.
+
+
 
 #### TuxedoOs - KDE Plasma:
 
 ![screenshot: MusicSearch v2.3.0](./assets/screenshots/musicsearch-v2.3.png)
 
-![screenshot: MusicSearch v2.3.0 mit CORE Suche](./assets/screenshots/musicsearch-v2.3-core-search-fullscreen.png)
+![screenshot: MusicSearch v2.3.0 with CORE Search](./assets/screenshots/musicsearch-v2.3-core-search-fullscreen.png)
 
 #### Ubuntu 25.10 - GNOME:
 
-![screenshot: MusicSearch v.2.3.0 unter Ubuntu 25.10](./assets/screenshots/musicsearch-v2.3-ubuntu1.png)
+![screenshot: MusicSearch v.2.3.0 on Ubuntu 25.10](./assets/screenshots/musicsearch-v2.3-ubuntu1.png)
 
 #### Fedora 43 Workstation - GNOME:
 
-![screenshot: MusicSearch v.2.3.0 unter Fedora 43 Workstation](./assets/screenshots/musicsearch-v2.3-fedor-3.png)
+![screenshot: MusicSearch v.2.3.0 on Fedora 43 Workstation](./assets/screenshots/musicsearch-v2.3-fedor-3.png)
 
 
 #### Linux Mint 22.3 - Cinnamon
 
-![screenshot: MusicSearch v.2.3.0 unter Linux Mint 22.3](./assets/screenshots/musicsearch-v2.3-mint.png)
+![screenshot: MusicSearch v.2.3.0 on Linux Mint 22.3](./assets/screenshots/musicsearch-v2.3-mint.png)
 
 #### Windows 11:
 
-![screenshot:MusicSearch v2.3.0 unter Windows 11](./assets/screenshots/musicsearch-v.2.3-win.png)
+![screenshot:MusicSearch v2.3.0 on Windows 11](./assets/screenshots/musicsearch-v.2.3-win.png)
 ## Key Features (Accessibility First)
 
-* **Semantische HTML-Ausgabe:** Ergebnisse werden im `QTextBrowser` strukturiert aufbereitet, sodass Screenreader Überschriften und Datensätze klar unterscheiden können.
-* **Optimierte Tab-Führung:** Die Fokus-Reihenfolge folgt dem natürlichen Arbeitsfluss (Eingabe -> Filter -> Ergebnisse).
-* **Grenzenloser Zoom:** Die Ergebnisanzeige lässt sich per `Strg + Mausrad` oder Tastatur flexibel skalieren, die Benutzeroberfläche per Shortcut oder über das Menü (ab v2.2.9).
-* **Hoher Kontrast & Akzentfarben:** Die App verzichtet auf blasse Schriften und übernimmt automatisch die Akzentfarben Ihres Betriebssystems.
-* **Plattform-Konsistenz:** Eigene Material Design Icons garantieren ein identisches Interface unter Windows, KDE und GNOME.
+- **Semantic HTML output:** Results are structured in `QTextBrowser` so that screen readers can clearly distinguish between headings and data records.
+- **Optimized tab navigation:** The focus order follows the natural workflow (input -> filter -> results).
+- **Unlimited zoom:** The results display can be flexibly scaled using `Ctrl + mouse wheel` or keyboard shortcuts, and the user interface can be scaled using shortcuts or the menu (from v2.2.9 onwards).
+- **High contrast & accent colors:** The app does not use pale fonts and automatically adopts the accent colors of your operating system.
+- **Platform consistency:** Custom Material Design icons guarantee an identical interface on Windows, KDE, and GNOME.
 
 
 ## Installation & Setup
 
-Wir haben die Installation so einfach wie möglich gestaltet. Bitte folgen Sie den Schritten für Ihr System.
+We have made the installation as simple as possible. Please follow the steps for your system.
 
-### 1. Projektordner vorbereiten
+### 1. Prepare the project folder
 
-Laden Sie das Repository herunter und navigieren Sie im Terminal in den Hauptordner.
+Download the repository and navigate to the main folder using the terminal.
 
-### 2. Virtuelle Umgebung einrichten (Empfohlen)
+### 2. Set up a virtual environment (recommended)
 
-Um Konflikte mit anderen Python-Paketen zu vermeiden, nutzen wir ein `venv`.
+To avoid conflicts with other Python packages, we use a `venv`.
 
-**Windows 11:**
-
-```powershell
-python -m venv venv
-.\venv\Scripts\activate
-```
-
-**Linux (Ubuntu, Mint, Fedora, Mac):**
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 3. Abhängigkeiten installieren
+### 3. Install dependencies
 
 ```bash
 pip3 install pyside6 requests
@@ -87,33 +75,34 @@ Ab Version 2.3.0 benötigen Sie zusätzlich `keyring` (für Nutzung und Verwaltu
 pip3 install keyring
 ```
 
-## System-spezifische Hinweise
+## System-specific notes
 
-Sollte die App unter **Linux Mint** oder **Ubuntu** nicht starten (XCB-Fehler), fehlt eine wichtige Systembibliothek. Installieren Sie diese mit:
+If the app does not start on **Linux Mint** (XCB error), an important system library is missing. Install it with:
 
 ```bash
 sudo apt update && sudo apt install libxcb-cursor0
 ```
+On **Fedora-KDE**, **Ubuntu**, **LinuxMint** and **Windows 11**, the app integrates seamlessly into the desktop environment and automatically adopts the selected system colors.
 
-Unter **Fedora-KDE**, **LinuxMint**, **MacOS**, **Windows11** integriert sich die App nahtlos in die Desktop-Umgebung und übernimmt die gewählten Systemfarben automatisch.
+DarkMode is not supported on Fedora Workstation 43 (GNOME). This means that the hard-coded white font colors from app versions 2.2.6 and 2.2.7 are not readable. For these operating systems, please use version 2.2.5, which does not specify any formatting.
+From version 2.2.9 onwards, fixed font colors are no longer included. However, there are still display problems with the tabs in DarkMode on Mac.
 
-Unter Fedora-Workstation 43 (GNOME) und Ubuntu 25.10 wird der DarkMode nicht übernommen. Dadurch sind die fest programmierten weißen Schriftfarben aus den App-Versionen 2.2.6 und 2.2.7 nicht lesbar. Verwenden Sie für diese Betriebssysteme Version 2.2.5, die noch keine Formatierung vorgibt.
 
+## Start the App
 
-## App starten
-
-Starten Sie die Anwendung aus dem Hauptverzeichnis mit folgendem Befehl:
+Start the application from the main directory with the following command:
 
 ```bash
 python3 main.py
 ```
-## Versions-Hinweise
-- **v2.3.0:** Zusätzliche Suchfunktion über die CORE-API
-- **v2.2.9:** Zoom-Funktion für die GUI, per Shortcut und über das Menü
-- **v2.2.7:** Umstieg auf lokale Material Design Icons (Fallback-Sicherheit).
-- **v2.2.5:** Einheitliches Datenmodell.
-- **v2.2.0** Implementierung der OpenLibrary-API.
-- **v2.1.4:** Umstellung auf semantische HTML-Ergebnisanzeige für Screenreader.
-- **v2.0.0:** Erste stabile CLI-Version mit iTunes und MusicBrainz-Integration.
+
+## Release Notes
+- **v2.3.0:** Additional search function via the CORE API
+- **v2.2.9:** Zoom function for the GUI, via shortcut and menu
+- **v2.2.7:** Switch to local Material Design icons (fallback security).
+- **v2.2.5:** Uniform data model.
+- **v2.2.0** Implementation of the OpenLibrary API.
+- **v2.1.4:** Switch to semantic HTML result display for screen readers.
+- **v2.0.0:** First stable CLI version with iTunes and MusicBrainz integration.
 
 
